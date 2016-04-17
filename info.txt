@@ -1,0 +1,23 @@
+https://angularjs.org/
+https://docs.angularjs.org/tutorial/step_00
+https://docs.angularjs.org/guide/index
+https://habrahabr.ru/post/271765/
+https://habrahabr.ru/post/277087/
+https://habrahabr.ru/hub/angularjs/page3/
+
+https://www.codeschool.com/courses/shaping-up-with-angular-js
+https://thinkster.io/topics/angular
+https://egghead.io/
+http://tutorials.jenkov.com/angularjs/index.html
+
+---------- Розділи, елементи
+1. Аккаунти (грошові)
+2. Витрати
+3. Доходи
+4. Категорії витрат
+5. Категорії доходів
+6. Транзакції (все по даті)
+7. Дашборд інфи, Огляд (Сумма на аккаунтах, надходження за місяць, витрати за місяць)
+8. Дашборд графік
+9. Огляд витрат доходів по категоріях
+10. Графіки

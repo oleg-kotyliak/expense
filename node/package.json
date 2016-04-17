@@ -1,0 +1,15 @@
+{
+  "name": "expence",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oleg Kot.",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.4.12"
+  }
+}
