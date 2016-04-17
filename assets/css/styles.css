@@ -1,0 +1,87 @@
+
+header {
+    background: #2095f2;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.h-accounts {
+}
+
+.h-accounts > div {
+    height: 160px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h-accounts > div > div {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 500;
+    width: 100%;
+}
+
+.h-amount {
+    font-size: 16px;
+}
+
+.h-account-descript {
+    font-size: 10px;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.h-icon-holder {
+    width: 50px;
+}
+
+.h-accounts i {
+    font-size: 45px;
+}
+
+.h-list > div {
+    height: 170px;
+}
+
+/* presets */
+.b100 {
+    font-weight: 100;
+}
+.b400 {
+    font-weight: 400;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.text-grey {
+    color: #4444;
+}
+
+/* Content styles */
+
+.accounts-row-primary {
+    border-left: 3px solid #428bca;
+    margin-top: 20px;
+    padding: 10px 0;
+    margin-left: -7px;
+}
+.accounts-row-success {
+    border-left: 3px solid #3c763d;
+    margin-top: 10px;
+    padding: 10px 0;
+    margin-left: -7px;
+}
+.accounts-row-danger {
+    border-left: 3px solid #a94442;
+    margin-top: 10px;
+    padding: 10px 0;
+    margin-left: -7px;
+    margin-bottom:20px;
+}
+
+.btn-overview {
+    width: 100%;
+}
