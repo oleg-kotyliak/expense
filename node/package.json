@@ -10,6 +10,7 @@
   "author": "Oleg Kot.",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "mongoose": "^4.4.12"
   }
 }

@@ -1,38 +1,72 @@
-var expenceApp = angular.module('expenceApp', ['ngRoute','ngAnimate']);
+var app = angular.module('expenceApp', []);
 
-expenceApp.config(['$routeProvider',function($routeProvider){
-    $routeProvider
-        .when('/',{
-            templateUrl:"template/home.html",
-            controller:"PhoneListCtrl"
-        })
-        .when('/about',{
-            templateUrl:"template/about.html",
-            controller:"AboutCtrl"
-        })
-        .when('/contact',{
-            templateUrl:"template/contact.html",
-            controller:"ContactCtrl"
-        })
-        .when('/phones/:phoneId',{
-            templateUrl:"template/phone-detail.html",
-            controller:"PhoneDetailCtrl"
-        })
-        .otherwise({
-            redirectTo: '/'
-        });
-}]);
+app.controller('Manage', function ($scope, $http) {
+    
+    $scope.nav = {
+        page: 'main',
+        mainTpl: 'blocks/mainChart.html'
+    }
 
-expenceApp.controller('PhoneListCtrl',['$scope','$http','$location', function($scope,$http, $location){ console.log("we are here") }]);
-expenceApp.controller('AboutCtrl',['$scope','$http','$location', function($scope,$http, $location){
-    $http.get('home.html').success(function(data,status,headers,config) {
-        console.log(data);
+    $scope.templates = {
+        mainChart : 'blocks/mainChart.html',
+        overview: 'blocks/overview.html',
+        expenceByCategory: "blocks/expenceByCategory.html",
+        accounts: "blocks/accounts.html"
+    }
+    
+    $scope.setMainTpl = function (tpl) {
+        $scope.nav.mainTpl = tpl;
+    }
+
+    $scope.icons = {
+        cash: {
+            color: '',
+            ico: '"account_balance_wallet"'
+        },
+        bank: {
+            color: '',
+            ico: '"account_balance"'
+        },
+        credit: {
+            color: '',
+            ico: '"credit_card"'
+        }
+    }
+    
+});
+
+app.controller('MainContent', function($scope, $http) {
+
+    $http.get('/test').success(function(data) {
+        $scope.question=data.question;
     });
-}]);
-expenceApp.controller('ContactCtrl',['$scope','$http','$location', function($scope,$http, $location){ }]);
 
-expenceApp.controller('PhoneDetailCtrl',['$scope','$http','$location','$routeParams', function($scope,$http, $location, $routeParams){
-    $http.get('phones/'+$scope.phoneId+'.json').success(function(data){
-        $scope.phone=data;
-    })
-}]);
+});
+
+app.controller('Sidebar', function ($scope, $http) {
+});
+
+app.controller('Accounts', function ($scope, $http) {
+    $scope.showAccountsPage = function () {
+        $scope.setMainTpl($scope.templates.accounts);
+    }
+    
+    $scope.accounts = {
+        title: '',
+        balance: '',
+        type: 'Credit card'
+    };
+    var a = JSON.stringify({'a':'s','c':'s'});
+    $scope.addAccount = function () {
+        $http.post('/accounts/', $scope.accounts).success(function(data) {
+            // console.log(data);
+            $scope.accounts.title = '';
+            $scope.accounts.balance = '';
+            $scope.accounts.type = 'Credit card';
+        });
+
+    }
+
+
+    // $scope.setMainTpl($scope.templates.accounts);
+});

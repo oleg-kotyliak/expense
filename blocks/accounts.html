@@ -1,0 +1,59 @@
+<div class="well b400" ng-controller="Accounts">
+    <h3 class="b400">Accounts <span class="text-muted b100">managing</span></h3>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group label-floating">
+                <label for="i1" class="control-label">Account title</label>
+                <input type="input" class="form-control" id="i1" ng-model="accounts.title">
+                <span class="help-block">Display name of the feature <code>account</code></span>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group label-floating">
+                <label for="i2" class="control-label">Opening balance</label>
+                <input type="input" class="form-control" id="i2" ng-model="accounts.balance">
+                <span class="help-block">Current balance of the <code>account</code></span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <select class="form-control" ng-model="accounts.type">
+                    <option value="Credit card">Credit cart</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Bank">Bank</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3" style="height:80px; display: flex; align-items: center;">
+            <a style="align-items: flex-end;" class="btn btn-raised btn-info btn-overview" ng-click="addAccount()">Add account</a>
+        </div>
+    </div>
+
+    <div class="row accounts-row-primary account">
+        <div class="col-md-1 h-icon-holder2">
+            <i class="material-icons">account_balance_wallet</i>
+        </div>
+        <div class="col-md-5 flex-center"><h4>My cash</h4></div>
+        <div class="col-md-6 align-right text-success">$ 40 174.00</div>
+    </div>
+
+    <div class="row accounts-row-success account">
+        <div class="col-md-1 h-icon-holder2">
+            <i class="material-icons">account_balance</i>
+        </div>
+        <div class="col-md-5 flex-center"><h4>Some bank savements</h4></div>
+        <div class="col-md-6 align-right text-success">$ 40 174.00</div>
+    </div>
+
+    <div class="row accounts-row-danger account">
+        <div class="col-md-1 h-icon-holder2">
+            <i class="material-icons">credit_card</i>
+        </div>
+        <div class="col-md-5 flex-center"><h4>Raifaizen</h4></div>
+        <div class="col-md-6 align-right text-success">$ 40 174.00</div>
+    </div>
+
+
+</div>

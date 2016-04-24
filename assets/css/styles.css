@@ -5,6 +5,17 @@ header {
     margin-bottom: 20px;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.account h4 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
 .h-accounts {
 }
 
@@ -34,6 +45,10 @@ header {
 
 .h-icon-holder {
     width: 50px;
+}
+.h-icon-holder2 {
+    display: flex;
+    justify-content: center;
 }
 
 .h-accounts i {
@@ -68,18 +83,32 @@ header {
     padding: 10px 0;
     margin-left: -7px;
 }
+.accounts-row-primary i {
+    color: #428bca;
+    font-size: 45px;
+}
+
 .accounts-row-success {
     border-left: 3px solid #3c763d;
     margin-top: 10px;
     padding: 10px 0;
     margin-left: -7px;
 }
+.accounts-row-success i {
+    color: #3c763d;
+    font-size: 45px;
+}
+
 .accounts-row-danger {
     border-left: 3px solid #a94442;
     margin-top: 10px;
     padding: 10px 0;
     margin-left: -7px;
     margin-bottom:20px;
+}
+.accounts-row-danger i {
+    color: #a94442;
+    font-size: 45px;
 }
 
 .btn-overview {
